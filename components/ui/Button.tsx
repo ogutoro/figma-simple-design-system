@@ -16,7 +16,7 @@ const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
 };
 
 const baseClasses =
-  "inline-flex items-center justify-center gap-(--sds-size-space-200) px-(--sds-size-space-200) py-(--sds-size-space-200) rounded-(--sds-size-radius-200) border border-solid text-(length:--sds-typography-body-size-medium) font-(--sds-typography-body-font-weight-regular) whitespace-nowrap overflow-hidden";
+  "inline-flex items-center justify-center gap-(--sds-size-space-200) px-(--sds-size-space-200) py-(--sds-size-space-200) rounded-(--sds-size-radius-200) border border-solid text-(length:--sds-typography-body-size-medium) font-(--sds-typography-body-font-weight-regular) leading-none whitespace-nowrap overflow-hidden";
 
 export default function Button({
   children,

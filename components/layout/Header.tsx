@@ -34,9 +34,9 @@ export default function Header() {
       </nav>
 
       {/* 認証ボタン（デスクトップのみ） */}
-      <div className="hidden lg:flex items-center gap-(--sds-size-space-300) shrink-0">
-        <Button variant="secondary" href="/signin">Sign in</Button>
-        <Button variant="primary" href="/register">Register</Button>
+      <div className="hidden lg:flex items-center gap-(--sds-size-space-300) w-44.5 shrink-0">
+        <Button variant="secondary" href="/signin" className="flex-1 min-w-0">Sign in</Button>
+        <Button variant="primary" href="/register" className="flex-1 min-w-0">Register</Button>
       </div>
 
       {/* ハンバーガーボタン（モバイルのみ） */}
