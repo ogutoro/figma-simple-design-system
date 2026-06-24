@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/ui/Button";
 import NavigationPill from "@/components/ui/NavigationPill";
 
@@ -15,7 +16,7 @@ export default function Header() {
   return (
     <header className="bg-(--sds-color-background-default-default) border-b border-(--sds-color-border-default-default) flex items-center justify-between p-(--sds-size-space-600) lg:gap-(--sds-size-space-600) lg:p-(--sds-size-space-800) w-full">
       {/* ロゴ */}
-      <div className="shrink-0">
+      <Link href="/" className="shrink-0">
         <Image
           src="/images/logo.svg"
           alt="Logo"
@@ -24,7 +25,7 @@ export default function Header() {
           priority
           unoptimized
         />
-      </div>
+      </Link>
 
       {/* ナビゲーション（デスクトップのみ） */}
       <nav className="hidden lg:flex flex-1 flex-wrap items-center justify-end gap-(--sds-size-space-200) min-w-0">
