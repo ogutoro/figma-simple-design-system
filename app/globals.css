@@ -1,6 +1,163 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-roboto-mono);
+}
+
+/* Simple Design System — CSS Custom Properties
+ * Generated from Figma: Simple Design System (Community)
+ * Source: https://www.figma.com/design/d4LzV5rZ1VBS3mr6zEdy5j
+ */
+
 :root {
+  /* ============================================================
+   * COLOR — Primitive
+   * ============================================================ */
+
+  --sds-color-slate-200: #e3e3e3;
+  --sds-color-black-400: #0c0c0d66;
+  --sds-color-black-500: #0c0c0db2;
+  --sds-color-pink-500: #ea3fb8;
+  --sds-color-red-500: #ec221f;
+  --sds-color-yellow-600: #bf6a02;
+  --sds-color-green-500: #14ae5c;
+
+  /* ============================================================
+   * COLOR — Background
+   * ============================================================ */
+
+  --sds-color-background-default-default: #ffffff;
+  --sds-color-background-default-secondary: #f5f5f5;
+  --sds-color-background-brand-default: #2c2c2c;
+  --sds-color-background-brand-secondary: #e6e6e6;
+  --sds-color-background-brand-tertiary: #f5f5f5;
+  --sds-color-background-neutral-tertiary: #e3e3e3;
+  --sds-color-background-positive-secondary: #cff7d3;
+  --sds-color-background-disabled-default: #d9d9d9;
+  --sds-color-background-utilities-scrim: #ffffffcc;
+
+  /* ============================================================
+   * COLOR — Text
+   * ============================================================ */
+
+  --sds-color-text-default-default: #1e1e1e;
+  --sds-color-text-default-secondary: #757575;
+  --sds-color-text-default-tertiary: #b3b3b3;
+  --sds-color-text-brand-on-brand: #f5f5f5;
+  --sds-color-text-brand-on-brand-secondary: #1e1e1e;
+  --sds-color-text-brand-on-brand-tertiary: #2c2c2c;
+  --sds-color-text-brand-tertiary: #757575;
+  --sds-color-text-positive-on-positive-secondary: #02542d;
+  --sds-color-text-utilities-text-on-overlay: #0c0c0d;
+
+  /* ============================================================
+   * COLOR — Icon
+   * ============================================================ */
+
+  --sds-color-icon-default-default: #1e1e1e;
+  --sds-color-icon-default-tertiary: #b3b3b3;
+  --sds-color-icon-brand-default: #2c2c2c;
+  --sds-color-icon-brand-on-brand: #f5f5f5;
+  --sds-color-icon-disabled-on-disabled: #b3b3b3;
+
+  /* ============================================================
+   * COLOR — Border
+   * ============================================================ */
+
+  --sds-color-border-default-default: #d9d9d9;
+  --sds-color-border-brand-default: #2c2c2c;
+  --sds-color-border-neutral-secondary: #767676;
+  --sds-color-border-disabled-default: #b3b3b3;
+
+  /* ============================================================
+   * SIZE — Spacing
+   * ============================================================ */
+
+  --sds-size-space-050: 2px;
+  --sds-size-space-100: 4px;
+  --sds-size-space-150: 6px;
+  --sds-size-space-200: 8px;
+  --sds-size-space-300: 12px;
+  --sds-size-space-400: 16px;
+  --sds-size-space-600: 24px;
+  --sds-size-space-800: 32px;
+  --sds-size-space-1200: 48px;
+  --sds-size-space-1600: 64px;
+  --sds-size-space-4000: 160px;
+
+  /* ============================================================
+   * SIZE — Border Radius
+   * ============================================================ */
+
+  --sds-size-radius-100: 4px;
+  --sds-size-radius-200: 8px;
+  --sds-size-radius-400: 16px;
+  --sds-size-radius-full: 9999px;
+
+  /* ============================================================
+   * SIZE — Icon
+   * ============================================================ */
+
+  --sds-size-icon-small: 24px;
+  --sds-size-icon-large: 40px;
+
+  /* ============================================================
+   * SIZE — Stroke / Padding
+   * ============================================================ */
+
+  --sds-size-stroke-border: 1px;
+  --sds-size-padding-lg: 16px;
+
+  /* ============================================================
+   * RESPONSIVE
+   * ============================================================ */
+
+  --sds-responsive-border-width: 1px;
+  --sds-responsive-device-width: 1200px;
+
+  /* ============================================================
+   * TYPOGRAPHY — Font Families
+   * ============================================================ */
+
+  --sds-typography-body-font-family: Inter;
+  --sds-typography-heading-font-family: Inter;
+  --sds-typography-subheading-font-family: Inter;
+  --sds-typography-subtitle-font-family: Inter;
+  --sds-typography-title-page-font-family: Inter;
+  --sds-typography-title-hero-font-family: Inter;
+  --sds-typography-code-font-family: "Roboto Mono";
+
+  /* ============================================================
+   * TYPOGRAPHY — Font Sizes
+   * ============================================================ */
+
+  --sds-typography-body-size-small: 14px;
+  --sds-typography-body-size-medium: 16px;
+  --sds-typography-code-size-base: 16px;
+  --sds-typography-subheading-size-medium: 20px;
+  --sds-typography-heading-size-base: 24px;
+  --sds-typography-subtitle-size-small: 24px;
+  --sds-typography-subtitle-size-base: 32px;
+  --sds-typography-scale-06: 32px;
+  --sds-typography-title-page-size-base: 48px;
+  --sds-typography-title-hero-size: 72px;
+
+  /* ============================================================
+   * TYPOGRAPHY — Font Weights
+   * ============================================================ */
+
+  --sds-typography-body-font-weight-regular: 400;
+  --sds-typography-subtitle-font-weight: 400;
+  --sds-typography-subheading-font-weight: 400;
+  --sds-typography-code-font-weight: 400;
+  --sds-typography-body-font-weight-strong: 600;
+  --sds-typography-heading-font-weight: 600;
+  --sds-typography-title-page-font-weight: 700;
+  --sds-typography-title-hero-font-weight: 700;
+}
+
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -23,4 +180,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
