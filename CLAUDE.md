@@ -67,9 +67,24 @@ components/
 
 ### スタイリング
 
-- **必ず `--sds-*` CSS変数を使う** (Tailwindのarbitrary valueで参照: `text-[var(--sds-color-text-default-default)]`)
+- **必ず `--sds-*` CSS変数を使う**
 - Tailwindのデフォルトカラー (`text-gray-900` 等) は使わない
 - Tailwind v4のCSS-first設定を使用 (`@theme` / `@layer`)
+
+#### Tailwind v4 CSS変数の記法
+
+v4では `[var(--x)]` の代わりに `(--x)` の短縮記法を使う。IDEが旧記法を警告するので必ず新記法で書く。
+
+| 旧記法（使わない） | v4正規記法（こちらを使う） |
+| --- | --- |
+| `bg-[var(--x)]` | `bg-(--x)` |
+| `text-[color:var(--x)]` | `text-(--x)` |
+| `text-[length:var(--x)]` | `text-(length:--x)` |
+| `font-[var(--x)]` | `font-(--x)` |
+| `border-[var(--x)]` | `border-(--x)` |
+| `p-[var(--x)]` | `p-(--x)` |
+| `gap-[var(--x)]` | `gap-(--x)` |
+| `rounded-[var(--x)]` | `rounded-(--x)` |
 
 ### コンポーネント
 
