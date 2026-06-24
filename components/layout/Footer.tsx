@@ -49,7 +49,7 @@ const linkColumns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-(--sds-color-background-default-default) border-t border-(--sds-color-border-default-default) flex flex-col gap-(--sds-size-space-1600) p-(--sds-size-space-800) lg:flex-row lg:flex-wrap lg:gap-(--sds-size-space-400) lg:pb-40">
+    <footer className="bg-(--sds-color-background-default-default) border-t border-(--sds-color-border-default-default) flex flex-col gap-(--sds-size-space-1600) p-(--sds-size-space-800) lg:flex-row lg:gap-(--sds-size-space-400) lg:pb-40">
       {/* ロゴ + ソーシャルリンク */}
       <div className="flex w-full items-center justify-between shrink-0 lg:w-[262px] lg:flex-col lg:items-start lg:justify-start lg:gap-(--sds-size-space-600)">
         <Image
@@ -80,11 +80,11 @@ export default function Footer() {
       </div>
 
       {/* リンクカラム */}
-      <div className="flex flex-col gap-(--sds-size-space-600) items-start w-full lg:flex-row lg:gap-(--sds-size-space-400) lg:w-auto">
+      <div className="flex flex-col gap-(--sds-size-space-600) items-start w-full lg:flex-row lg:flex-1 lg:min-w-0 lg:gap-(--sds-size-space-400)">
         {linkColumns.map((column) => (
           <div
             key={column.title}
-            className="flex flex-col gap-(--sds-size-space-200) items-start w-full lg:w-[262px] lg:gap-(--sds-size-space-300)"
+            className="flex flex-col gap-(--sds-size-space-200) items-start w-full lg:flex-1 lg:min-w-0 lg:gap-(--sds-size-space-300)"
           >
             <p className="font-semibold text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) leading-[1.4] pb-(--sds-size-space-100) lg:pb-(--sds-size-space-400)">
               {column.title}
