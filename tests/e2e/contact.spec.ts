@@ -10,10 +10,10 @@ const VALID = {
 };
 
 async function fillForm(page: import("@playwright/test").Page) {
-  await page.getByLabel("Name").fill(VALID.name);
-  await page.getByLabel("Surname").fill(VALID.surname);
-  await page.getByLabel("Email").fill(VALID.email);
-  await page.getByLabel("Message").fill(VALID.message);
+  await page.getByLabel("Name", { exact: true }).fill(VALID.name);
+  await page.getByLabel("Surname", { exact: true }).fill(VALID.surname);
+  await page.getByLabel("Email", { exact: true }).fill(VALID.email);
+  await page.getByLabel("Message", { exact: true }).fill(VALID.message);
 }
 
 test.describe("Contact フォーム", () => {
@@ -37,16 +37,16 @@ test.describe("Contact フォーム", () => {
   });
 
   test("nameをblurするとnameエラーのみ表示される", async ({ page }) => {
-    await page.getByLabel("Name").click();
-    await page.getByLabel("Surname").click();
+    await page.getByLabel("Name", { exact: true }).click();
+    await page.getByLabel("Surname", { exact: true }).click();
 
     await expect(page.getByText("名前を入力してください")).toBeVisible();
     await expect(page.getByText("苗字を入力してください")).not.toBeVisible();
   });
 
   test("不正なemailでblurするとemailエラーが表示される", async ({ page }) => {
-    await page.getByLabel("Email").fill("invalid-email");
-    await page.getByLabel("Name").click();
+    await page.getByLabel("Email", { exact: true }).fill("invalid-email");
+    await page.getByLabel("Name", { exact: true }).click();
 
     await expect(page.getByText("有効なメールアドレスを入力してください")).toBeVisible();
   });
@@ -80,12 +80,12 @@ test.describe("Contact フォーム", () => {
 
     await page.getByRole("button", { name: "もう一度送信する" }).click();
 
-    await expect(page.getByLabel("Name")).toBeVisible();
+    await expect(page.getByLabel("Name", { exact: true })).toBeVisible();
     await expect(page.getByRole("button", { name: "Submit" })).toBeVisible();
   });
 
   test("キーボードのみでフォームを送信できる", async ({ page }) => {
-    await page.getByLabel("Name").focus();
+    await page.getByLabel("Name", { exact: true }).focus();
     await page.keyboard.type(VALID.name);
     await page.keyboard.press("Tab");
     await page.keyboard.type(VALID.surname);
