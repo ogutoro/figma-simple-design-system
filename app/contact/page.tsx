@@ -1,4 +1,5 @@
 import Header from "@/components/layout/Header";
+import ContactForm from "@/components/contact/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -16,85 +17,7 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* フォームカード */}
-          <form className="bg-(--sds-color-background-default-default) border border-(--sds-color-border-default-default) rounded-(--sds-size-radius-200) p-(--sds-size-space-600) flex flex-col gap-(--sds-size-space-600) items-start w-full min-w-80 lg:w-80">
-            {/* Name */}
-            <div className="flex flex-col gap-(--sds-size-space-200) items-start w-full">
-              <label
-                htmlFor="name"
-                className="text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) leading-[1.4]"
-              >
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="Value"
-                className="bg-(--sds-color-background-default-default) border border-(--sds-color-border-default-default) rounded-(--sds-size-radius-200) px-(--sds-size-space-400) py-(--sds-size-space-300) text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) placeholder:text-(--sds-color-text-default-tertiary) w-full leading-none"
-              />
-            </div>
-
-            {/* Surname */}
-            <div className="flex flex-col gap-(--sds-size-space-200) items-start w-full">
-              <label
-                htmlFor="surname"
-                className="text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) leading-[1.4]"
-              >
-                Surname
-              </label>
-              <input
-                id="surname"
-                type="text"
-                name="surname"
-                placeholder="Value"
-                className="bg-(--sds-color-background-default-default) border border-(--sds-color-border-default-default) rounded-(--sds-size-radius-200) px-(--sds-size-space-400) py-(--sds-size-space-300) text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) placeholder:text-(--sds-color-text-default-tertiary) w-full leading-none"
-              />
-            </div>
-
-            {/* Email */}
-            <div className="flex flex-col gap-(--sds-size-space-200) items-start w-full">
-              <label
-                htmlFor="email"
-                className="text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) leading-[1.4]"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Value"
-                className="bg-(--sds-color-background-default-default) border border-(--sds-color-border-default-default) rounded-(--sds-size-radius-200) px-(--sds-size-space-400) py-(--sds-size-space-300) text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) placeholder:text-(--sds-color-text-default-tertiary) w-full leading-none"
-              />
-            </div>
-
-            {/* Message */}
-            <div className="flex flex-col gap-(--sds-size-space-200) items-start w-full">
-              <label
-                htmlFor="message"
-                className="text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) leading-[1.4] w-full"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Value"
-                className="bg-(--sds-color-background-default-default) border border-(--sds-color-border-default-default) rounded-(--sds-size-radius-200) px-(--sds-size-space-400) py-(--sds-size-space-300) text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-default-default) placeholder:text-(--sds-color-text-default-tertiary) w-full min-h-20 leading-[1.4] resize-y"
-              />
-            </div>
-
-            {/* Submit */}
-            <div className="flex gap-(--sds-size-space-400) items-center w-full">
-              <button
-                type="submit"
-                className="flex-1 bg-(--sds-color-background-brand-default) border border-(--sds-color-border-brand-default) rounded-(--sds-size-radius-200) p-(--sds-size-space-300) text-(length:--sds-typography-body-size-medium) text-(--sds-color-text-brand-on-brand) leading-none whitespace-nowrap text-center"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </section>
       </main>
     </>
